@@ -36,4 +36,6 @@ if __name__ == "__main__":
         print("\n🧠 Thinking...")
         cont=query_llm(q)
         print(cont['choices'][0]['message']['content'])
+        print("\nresponse provider:", cont['provider'])
+        print("model url:", f"https://openrouter.ai/api/v1/chat/completions/{cont['model']}")
         print("\n==============================================\n")
